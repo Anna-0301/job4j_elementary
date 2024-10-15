@@ -36,4 +36,23 @@ public class CounterTest {
         boolean result = expected == output;
         System.out.println("Test passed " +  result);
     }
+
+    @Test
+    void whenSumEvenNumbersFromOneToTenThenThirty() {
+        int start = 1;
+        int finish = 10;
+        int result = Counter.sumByEven(start, finish);
+        int expected = 30;
+        assertThat(result).isEqualTo(expected);
+    }
+
+    @Test
+    void whenSumEvenNumbersFrom9To21Then130() {
+        int start = -9;
+        int finish = 21;
+        int result = Counter.sumByEven(start, finish);
+        int expected = 130;
+        assertThat(result).isEqualTo(expected);
+    }
+
 }
