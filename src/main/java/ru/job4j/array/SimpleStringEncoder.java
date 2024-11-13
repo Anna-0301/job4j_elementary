@@ -1,7 +1,5 @@
 package ru.job4j.array;
 
-import java.lang.reflect.Array;
-
 public class SimpleStringEncoder {
     public static String encode(String input) {
         String result = "";
