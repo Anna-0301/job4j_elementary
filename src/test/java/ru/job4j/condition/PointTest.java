@@ -6,6 +6,24 @@ import static org.assertj.core.api.Assertions.*;
 class PointTest {
 
     @Test
+    void whenPoints012And234Then3dot46() {
+        Point a = new Point(0, 1, 2);
+        Point b = new Point(2, 3, 4);
+        double expected = 3.46;
+        double output = a.distance3d(b);
+        assertThat(output).isEqualTo(expected, withPrecision(0.01));
+    }
+
+    @Test
+    void whenPoints132And356Then12() {
+        Point a = new Point(-1, -3, -2);
+        Point b = new Point(3, 5, 6);
+        double expected = 12;
+        double output = a.distance3d(b);
+        assertThat(output).isEqualTo(expected, withPrecision(0.01));
+    }
+
+    @Test
     void whenPoints00And20Then2() {
         Point a = new Point(0, 0);
         Point b = new Point(2, 0);
